@@ -21,7 +21,7 @@ Routing Key sẽ là những từ được phân cách bằng dấu chấm (.), 
 Ký tự dấu thăng (#) chỉ việc khớp với 0 hoặc nhiều từ
 Các messages có routing key khớp với pattern thì được điều hướng tới queue đó và đợi có consumer lấy ra sử dụng.
 
-3.Headers Exchange
+3.Headers Exchange:
 Tương tự như Topic Exchanges, nhưng điều hướng dựa trên header value chứ không phải routing key. 
 Một message được match là khi giá trị trên header bằng với giá trị trên binding.
 Có một argument đặc biệt gọi là “x-match”, nó được thêm vào trong binding, giữa exchange, x-match cho biết tất cả headers cần match hết hay chỉ cần một cái. 
@@ -30,6 +30,6 @@ x-match có 2 giá trị: “any” hoặc “all”. Với “all” là giá t
 - “all”: nghĩa là nó cần tất cả các cặp header (key-value) phải match
 - “any”: nghĩa là chỉ cần ít nhất 1 cặp key-value được match
 
-4.Fanout Exchange
+4.Fanout Exchange:
 điều hướng messages tới tất cả các queue, không quan tâm đến Routing Key hay Routing Pattern.
 Nếu lúc init có tạo key, thì key đó sẽ bị ignore
