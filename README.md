@@ -1,6 +1,7 @@
 # RabbitMQ
 
 **Flow cơ bản của RabbitMQ:
+
 -Producer gửi (publish) message vào exchange
 -Exchange nhận message và chịu trách nhiệm điều hướng message
 -Binding là những config nằm giữa Exchange và Queue. Như hình trên thì ta thấy các Bindings đang điều hướng vào 2 Queues khác nhau.
@@ -8,6 +9,7 @@
 -Consumers xử lý Messages
 
 ** Các loại Exchanges: direct, topic, headers, fanout 
+
 1.Direct Exchange: 
 điều hướng Messages dựa vào routing keys, queue có binding_key nào match thì truyền message vào, 1 message có thể truyền vào nhiều queue có binding_key match với nó
 
